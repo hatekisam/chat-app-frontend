@@ -56,6 +56,8 @@ export default function ChatContainer({ currentChat, socket, }) {
     if (socket.current) {
       socket.current.on("msg-recieve", (msg) => {
         setArrivalMessage({ fromSelf: false, message: msg });
+        const audio = new Audio("notifier.mp3")
+        audio.play()
       });
     }
   }, []);
