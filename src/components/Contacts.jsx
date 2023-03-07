@@ -12,7 +12,7 @@ export default function Contacts({ contacts, changeChat }) {
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
     setCurrentUserName(data.username);
-    setCurrentUserImage(data.avatarImage);
+    setCurrentUserImage(data.image);
   }, []);
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
@@ -29,8 +29,8 @@ export default function Contacts({ contacts, changeChat }) {
           <div className="current-user">
             <div className="avatar">
               <img
-                src={`data:image/svg+xml;base64,${currentUserImage}`}
-                alt="avatar"
+                src={currentUserImage}
+                alt="profile"
               />
             </div>
             <div className="username">
@@ -50,7 +50,7 @@ export default function Contacts({ contacts, changeChat }) {
                 >
                   <div className="avatar">
                     <img
-                      src={`data:image/svg+xml;base64,${contact.avatarImage}`}
+                      src={contact.image}
                       alt=""
                     />
                   </div>

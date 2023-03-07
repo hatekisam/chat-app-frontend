@@ -34,11 +34,12 @@ export default function Chat() {
 
   useEffect(async () => {
     if (currentUser) {
-      if (currentUser.isAvatarImageSet) {
+      if (currentUser.isImageSet) {
+        console.log(currentUser);
         const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
         setContacts(data.data);
       } else {
-        navigate("/setAvatar");
+        navigate("/setprofile");
       }
     }
   }, [currentUser]);
