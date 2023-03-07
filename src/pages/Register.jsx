@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { registerRoute } from "../utils/APIRoutes";
 
 export default function Register() {
+  document.title = "Brochat-Register"
   const navigate = useNavigate();
   const toastOptions = {
     position: "bottom-right",

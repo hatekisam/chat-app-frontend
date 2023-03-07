@@ -9,6 +9,7 @@ import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
 
 export default function Chat() {
+  document.title = "Brochat";
   const navigate = useNavigate();
   const socket = useRef();
   const [contacts, setContacts] = useState([]);

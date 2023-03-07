@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PageNotFound from "./components/404";
 import SetProfile from "./components/SetProfile";
 import Chat from "./pages/Chat";
 import Login from "./pages/Login";
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/setprofile" element={<SetProfile/>} />
         <Route path="/" element={<Chat />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
